@@ -1,4 +1,5 @@
-path <- "~/data/Raw_data"
+library(dada2)
+path <- "/stor/progetti/p1026/p1026u21/HPC_project/data/Raw_data"
 fnFs <- sort(list.files(path, pattern="_R1_001.fastq", full.names = TRUE))
 fnRs <- sort(list.files(path, pattern="_R2_001.fastq", full.names = TRUE))
 
@@ -13,4 +14,4 @@ filtRs <- file.path(path, "filtered", paste0(sample.names, "_R_filt.fastq.gz"))
 names(filtFs) <- sample.names
 names(filtRs) <- sample.names
 
-save.image("~/data/workspaces/pre_filtering.RData")
+save.image("/stor/progetti/p1026/p1026u21/HPC_project/data/workspaces/pre_filtering.RData")
