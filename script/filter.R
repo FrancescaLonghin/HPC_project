@@ -1,5 +1,5 @@
 library(dada2)
-setwd("~/Desktop/HPC_project")
-load("~/Desktop/HPC_project/data/workspaces/pre_filtering.RData")
+load("/stor/progetti/p1026/p1026u21/HPC_project/data/workspaces/pre_filtering.RData")
 out <- filterAndTrim(fnFs, filtFs, fnRs, filtRs, truncLen=c(230,229), trimLeft=c(17,21), maxN=0, maxEE=c(2,2), truncQ=2, rm.phix=TRUE,compress=TRUE, multithread=TRUE)
-save.image("~/Desktop/HPC_project/data/workspaces/post_filtering.RData")
+head(out)
+save.image("/stor/progetti/p1026/p1026u21/HPC_project/data/workspaces/post_filtering.RData")
