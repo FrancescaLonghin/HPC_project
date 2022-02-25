@@ -2,7 +2,7 @@
 
 # Slurm mandatory options: Number of tasks, Partition, Run time limit (dd-hh:mm:ss), RAM memory limit (k|M|G|T).
 #SBATCH --ntasks 1
-#SBATCH --cpus-per-task 4
+#SBATCH --cpus-per-task 8
 #SBATCH --partition allgroups
 #SBATCH --time 00:30:00
 #SBATCH --mem 200G
