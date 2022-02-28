@@ -2,10 +2,10 @@
 
 # Slurm mandatory options: Number of tasks, Partition, Run time limit (dd-hh:mm:ss), RAM memory limit (k|M|G|T).
 #SBATCH --ntasks 1
-#SBATCH --cpus-per-task 2
+#SBATCH --cpus-per-task 4
 #SBATCH --partition allgroups
-#SBATCH --time 02:00:00
-#SBATCH --mem 20G
+#SBATCH --time 01:30:00
+#SBATCH --mem 3G
 
 # Slurm additional options: Job name, Output and error logs, Email notification.
 #SBATCH --job-name dada
