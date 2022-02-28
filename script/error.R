@@ -1,0 +1,6 @@
+library(dada2)
+load("/stor/progetti/p1026/p1026u21/HPC_project/data/workspaces/post_filtering.RData")
+errF <- learnErrors(filtFs, multithread=TRUE)
+errR <- learnErrors(filtRs, multithread=TRUE)
+plotErrors(errF, nominalQ=TRUE)
+save.image("/stor/progetti/p1026/p1026u21/HPC_project/data/workspaces/post_error_computing.RData")
