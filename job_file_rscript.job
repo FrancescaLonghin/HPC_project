@@ -2,12 +2,13 @@
 
 # Slurm mandatory options: Number of tasks, Partition, Run time limit (dd-hh:mm:ss), RAM memory limit (k|M|G|T).
 #SBATCH --ntasks 1
+#SBATCH --cpus-per-task 2
 #SBATCH --partition allgroups
 #SBATCH --time 00:30:00
 #SBATCH --mem 5G
 
 # Slurm additional options: Job name, Output and error logs, Email notification.
-#SBATCH --job-name merging
+#SBATCH --job-name chimera
 #SBATCH --output std_output/output_%x.txt
 #SBATCH --error std_output/errors_%x.txt
 #SBATCH --mail-user francesca.longhin.2@studenti.unipd.it
@@ -15,4 +16,4 @@
 
 
 #Command to run software:
-srun singularity exec images/dada2.sif Rscript script/merge.R
+srun singularity exec images/dada2.sif Rscript script/chimera.R
