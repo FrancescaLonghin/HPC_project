@@ -1,0 +1,5 @@
+library(dada2)
+load("/stor/progetti/p1026/p1026u21/HPC_project/data/workspaces/post_merging.RData")
+seqtab.nochim <- removeBimeraDenovo(seqtab, method="consensus", multithread=TRUE, verbose=TRUE)
+dim(seqtab.nochim)
+save.image("/stor/progetti/p1026/p1026u21/HPC_project/data/workspaces/post_chimera_removal.RData")
